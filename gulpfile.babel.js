@@ -188,6 +188,30 @@ gulp.task("imagemin300", () => {
 
     .pipe(gulp.dest("public/galery/images/300/"));
 });
+gulp.task("imagemin500", () => {
+  return gulp
+    .src("src/galery/images/500/*")
+    .pipe(
+      squoosh({
+        encodeOptions: {
+          //   oxipng: {},
+          webp: {},
+          //   avif: {},
+          //   mozjpg: {},
+        },
+        preprocessOptions: {
+          resize: {
+            enabled: true,
+            width: 500,
+            // width: Math.round(src.width / 2),
+            // height: Math.round(src.height / 2),
+          },
+        },
+      })
+    )
+
+    .pipe(gulp.dest("public/galery/images/500/"));
+});
 
 gulp.task("default", () => {
   gulp.watch("./src/js/*.js", gulp.series("babel"));

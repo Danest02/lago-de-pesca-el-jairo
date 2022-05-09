@@ -22,7 +22,7 @@
     &::before{
         content: ' ';
         @extend .position-absolute;
-        background-color: rgba(197, 48, 2, 0.70);
+        background-color: rgba(197, 48, 2, 0.60);
     }
     &::after{
         @extend .flex-center, .position-absolute;

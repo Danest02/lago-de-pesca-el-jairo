@@ -1,0 +1,116 @@
+.my-slider {
+    --column: 1;
+    --row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+    
+    .my-slider__navegation {
+        display: grid;
+        grid-auto-flow: column;
+        gap: var(--space-7);
+        align-items: center;
+
+        .my-slider__navegation-button {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            transition: background-color .3s ;
+            
+
+            &::before {
+                transition: transform .3s ease;
+                @extend .flex-center, .pseudo-icon;
+                color: #fff;
+                font-size: 40px;
+                vertical-align: middle;
+                position: relative;
+                top: calc(50% - 20px);
+
+            }
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.5);
+                &::before{
+                    transform: scale(1.1);
+                }
+            }
+
+            &:active {
+                &::before{
+                    transform: scale(1.1);
+                }
+
+            }
+        }
+
+        .my-slider__navegation-button--back {
+            left: 0;
+            &::before {
+                content: "\e5e0";
+            }
+        }
+
+        .my-slider__navegation-button--next {
+            right: 0;
+            &::before {
+                content: "\e5e1";
+            }
+
+        }
+
+    }
+}
+
+.my-slider__container-slides {
+    position: relative;
+    overflow: hidden;
+    
+    
+}
+
+.my-slider__container-slides--before {
+    &::before {
+        @extend .background-pseudo-element;
+        right: -1px;
+        transition: opacity .3s ease;
+        opacity: 1;
+        z-index: $z-index-1;
+        pointer-events: none;
+        background: linear-gradient(to left, var(--color-primary), rgba(121, 0, 0, 0) 10%, rgba(121, 0, 0, 0));
+    }
+}
+
+.my-slider__container-slides--before-hiden {
+    &::before {
+        opacity: 0;
+    }
+}
+
+.my-slider__slides {
+    user-select: none;
+    transition: transform .3s;
+    position: relative;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    @extend .scrollbar-none;
+    scroll-snap-type: x mandatory;
+    // scroll-snap-type: x proximity;
+    display: grid;
+    grid-auto-columns: calc(100%  / var(--column));
+    grid-template-rows: repeat(var(--row), auto);
+    grid-auto-flow: column;
+    &:hover {
+        cursor: grab;
+    }
+
+    .my-slider__slide {
+        scroll-snap-align: start;
+        overflow: hidden;
+        pointer-events: none;
+    }
+}

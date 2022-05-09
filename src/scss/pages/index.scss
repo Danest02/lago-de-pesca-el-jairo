@@ -1,0 +1,23 @@
+
+.main{
+    .slider-top-container{
+        padding: 48px 0;
+        .slider-top{
+            --column: 2;
+            @include min-width(700px){
+                --column: 3;
+            }
+            @include min-width(1000px){
+                --column: 4;
+            }
+            .slider-top__slides{
+                .slider-top__slide{
+                    img{
+                        aspect-ratio: 16/10;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
