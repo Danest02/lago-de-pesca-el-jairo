@@ -1,0 +1,43 @@
+.top-header{
+    position: relative;
+    background-color: red;
+    user-select: none;
+    overflow: hidden;
+
+    .top-header__images{
+        @extend .flex-center;
+        .top-header__image{
+            flex-grow: 1;
+            aspect-ratio: 16/9;
+            min-width: 0;
+
+        }
+        .top-header__image--3{
+            display: none;
+            @include min-width(500px){
+                display: block;
+            }
+        }
+    }
+    &::before{
+        content: ' ';
+        @extend .position-absolute;
+        background-color: rgba(197, 48, 2, 0.70);
+    }
+    &::after{
+        @extend .flex-center, .position-absolute;
+        font-size: 16px;
+        font-family: 'tittle';
+        color: #fff;
+        text-align: center;
+        width: 90%;
+        position: absolute;
+        content: 'Ven a disfrutar de un ambiente relajante y natural con un nucleo familiar o grupo de amigos';
+        @include min-width(460px){
+            font-size: 24px;
+        }
+        @include min-width(700px){
+            font-size: 32px;
+        }
+    }
+}

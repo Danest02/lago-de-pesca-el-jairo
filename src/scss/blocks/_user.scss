@@ -1,0 +1,279 @@
+.user {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-background);
+    z-index: $z-index-3;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .user__container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .user__content {
+            max-height: 100%;
+            width: 100%;
+            padding: var(--space-6) 0 var(--space-1);
+            overflow: scroll;
+            @extend .scrollbar-none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-6);
+            justify-content: flex-start;
+
+
+            .user__icon {
+                font-size: 80px;
+                color: var(--color-icons);
+            }
+
+            .user__buttons {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-6);
+                align-items: flex-end;
+
+                .user__button {
+                    opacity: 0;
+                    transition: opacity 1s ease-in;
+                    right: var(--space-6);
+
+                    @include min-width(500px) {
+                        position: absolute;
+
+                    }
+                }
+                .user__button--close {
+                    top: var(--space-6);
+                }
+    
+                .user__button--go-back {
+                    top: calc(var(--space-6) + 38px + var(--space-6));
+                }
+            }
+
+        }
+    }
+
+}
+
+.log-in,
+.sing-in {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+
+    .user__tittle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.sing-in {
+    max-width: 100%;
+    width: min-content;
+
+    .sing-in__more-options {
+        margin-top: var(--space-6);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-6);
+
+        .sing-in__log-in {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            .sing-in--question-log-in {
+                @extend .p-small;
+            }
+
+            .sing-in__button-log-in {
+                color: var(--color-primary-500);
+            }
+        }
+
+        .sing-in__recover-password {
+            .sing-in__button-recover-password {
+                transition: color .3s ease;
+                @extend .p-small;
+
+                &::after {
+                    font-family: "material-icons-round";
+                    margin-left: 4px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 18px;
+                    color: var(--color-text);
+                    content: "\e5c8";
+                    transform: translateY(-2px);
+                }
+
+                &:hover {
+                    color: var(--color-secondary-500);
+
+                    &::after {
+                        transition: color .3s ease;
+                        color: var(--color-secondary-500);
+                    }
+                }
+            }
+        }
+    }
+}
+.log-in {
+    .log-in__form {
+        gap: var(--space-3);
+
+        .log-in__fieldset {
+            padding: 0;
+            border: none;
+            margin: 0;
+            margin-top: var(--space-6);
+            @extend .border-radius;
+
+            .log-in__legend {
+                font-family: 'p-semibold';
+                margin: 0;
+                padding: 0;
+                margin-bottom: var(--space-5);
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+.user--visible {
+    opacity: 1;
+    pointer-events: auto;
+
+    .user__container {
+        .user__content {
+            .user__buttons {
+                .user__button {
+                    opacity: 1;
+                }
+                .user__button--go-back {
+                    transition: opacity .5s ease-in-out;
+    
+                    &::before {
+                        @extend .pseudo-icon;
+                        font-size: 18px;
+                        color: inherit;
+                        content: "\e5c4";
+                        transform: translateY(-2px);
+                    }
+                    
+                }
+                .opacity{
+                    opacity: 0;
+                    pointer-events: none;
+                }    
+            }
+            .sing-in {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.user__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    align-items: center;
+    width: 100%;
+
+    .user__inputs {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: var(--space-6);
+        width: 100%;
+
+        .user__field:focus-within {
+            &:before {
+                color: var(--color-secondary-500);
+            }
+        }
+
+        .user__field--name {
+            &::before {
+                content: "\e7fd";
+            }
+        }
+
+        .user__field--password {
+            &::before {
+                content: "\e897";
+            }
+        }
+
+        .user__field--cell {
+            &::before {
+                content: "\e32c";
+            }
+        }
+
+        .user__field--phone {
+            &::before {
+                content: "\e0cd";
+            }
+        }
+
+        .user__field--mail {
+            &::before {
+                content: "\e0e6";
+            }
+        }
+
+        .user__field--location {
+            &::before {
+                content: "\e0c8";
+            }
+        }
+    }
+    .user__field {
+        padding: .5rem .5rem .5rem 0;
+        border-bottom: 2px solid var(--color-icons);
+        display: flex;
+        width: 260px;
+        max-width: 100%;
+    
+        &::before {
+            @extend .pseudo-icon;
+            transition: color .3s ease-in;
+            color: var(--color-icons);
+        }
+    
+        .user__input {
+            outline: none;
+            border: none;
+            width: 100%;
+            background-color: transparent;
+    
+            &::placeholder {
+                opacity: .9;
+                color: var(--color-text);
+            }
+        }
+    }
+    
+
+}
+

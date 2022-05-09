@@ -1,0 +1,64 @@
+//- pug -w --pretty src/pug/pages/*.pug -o ./public -p ./src/pug/templates
+
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title Julio Forros
+        meta(name="description" content="Fabrica de accesorios para motocicletas")
+        meta(name="author" content="Daniel Botero Arias y Davier Botero Arias")
+
+        //- STUB INDEXAR LOS BUSCADORES | no es necesario si esta en index
+        meta(name="robots" content="index, follow") 
+
+        //- STUB FAVICON | 64 x 64 recomendado
+        link(rel="shortcut icon" href="../public/galery/favicon/favicon.svg" type="image/x-icon")
+        link(rel="icon" href="../public/galery/favicon/favicon.svg" type="image/x-icon")
+
+        //- STUB LEAFLET.JS mapa
+        //- link(rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css")
+
+    
+        //- STUB ESTILOS CSS
+        link(rel="stylesheet" type="text/css" href="css/styles.css")
+
+        //- STUB: ICONOS DE GOOGLE
+        //- link(rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Material+Icons+Round")
+        //- link(rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Material+Icons")
+        //- link(rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Material+Icons+Outline+Two+Tone")
+        //- link(rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Material+Icons+Outline+Sharp")
+
+        //- STUB SOCIAL CARDS
+        meta(property="og:url" content="http://www.julioforros.com")
+        meta(property="og:type" content="website")
+        meta(property="og:title" content="titulo del post o pagina")
+        meta(property="og:description" content="Fabrica de accesorios para motocicletas")
+        meta(property="og:image" content="http://www.blackparadox.com/images/logo.svg")
+        meta(property="og:site_name" content="Nombre de la pagina")
+        block head
+        
+
+
+
+    body.body#body
+
+        -const whatsappNumberFactory = "320 645 0619"
+        -const phoneNumberFactory = "332 0211"
+        -const whatsappNumberStore = "320 645 0619"
+        -const phoneNumberStore = "332 0211"
+
+        header.header
+            include ../blocks/top-header.pug
+            include ../blocks/navbar-header.pug
+            block header
+
+        main.main
+            block main
+            include ../blocks/js.pug
+            include ../blocks/contact-button
+
+
+        
+        include ../blocks/footer.pug
+

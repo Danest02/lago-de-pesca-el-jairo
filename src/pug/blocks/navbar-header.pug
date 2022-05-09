@@ -1,0 +1,18 @@
+
+.navbar-header#navbar-header.container
+    .navbar-header__container
+        .navbar-header__container-logo
+        .navbar-header__container-links-buttons
+            .navbar-header__container-buttons
+                div(aria-label="abrir menu" id="hamburguer" class="hamburguer")
+                    .hamburguer__div-center
+            .menu#menu
+                ul.menu__links#menu__links
+                    li
+                        a(href="/" class="menu__link animated-border menu__link--inicio menu__link--active" id="menu__link--Inicio") Inicio
+                    -const links = ["Restaurante","Actividades","Como llegar","Contactanos"]
+                    each link in links
+                        li
+                            a(href="" + link +".html" id="menu__link--" + link, class="menu__link animated-border animated-border  menu__link--" + link) #{link}
+
+

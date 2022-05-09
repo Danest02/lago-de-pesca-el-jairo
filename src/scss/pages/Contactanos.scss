@@ -1,0 +1,142 @@
+.contact-us{
+    margin-top: var(--space-1);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    .contact-us__introduction{
+        @extend .border-shadow-left, .padding, .border-radius;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-6);
+        max-width: 400px;
+        justify-content: center;
+        align-items: center;
+        @include min-width($tablet){
+            flex-direction: row;
+        }
+        .contact-us__introduction-icon{
+            color: var(--color-primary-500);
+            font-size: 80px;
+        }
+    }
+    .contact-us__contact-means{
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-4);
+        .contact-us__venues{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-5);
+            .contact-us__venue{
+                flex: 1;
+                min-width: 200px;
+                max-width: max-content;
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-6);
+                @extend .border-shadow-left, .padding, .border-radius;
+                .contact-us__venue-information{
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--space-7);    
+                    div{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+                        .contact-us__venue-contact{
+                            display: flex;
+                            flex-direction: row;
+                            gap: 6px;
+                        }
+                        .contact-us__venue-contact--whatsapp{
+                            .contact-us__span{
+                                &::after{
+                                    @extend .p-small;
+                                    content: "Abrir el chat";
+                                    margin-left: 8px;
+                                    vertical-align: middle;
+                                    color: var(--color-primary-500);
+                                    transition: opacity .3s ease;
+                                    @include min-width-landscape($tablet-landscape){
+                                        opacity: 0;
+                                    }
+                                    @include max-width(300px){
+                                        display: none;
+                                    }
+                                }
+                            }
+
+                        }
+                        &:hover{
+                            .contact-us__venue-contact--whatsapp{
+                                .contact-us__span{
+                                    &::after{
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+        .contact-us__social-networks{
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-7);
+            @extend .border-shadow-left, .padding, .border-radius;
+            div{
+                display: flex;
+                flex-direction: column;
+                gap: 4px;    
+                .contact-us__social-network{ 
+                    display: flex;
+                    flex-direction: row;
+                    gap: 6px;
+                    align-items: center;
+                    @extend .button-effect;
+                }
+            }
+        }
+        .contact-us__mail{
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-7);
+            @extend .border-shadow-left, .padding, .border-radius;
+            .contact-us__link-mail{
+                display: flex;
+                flex-direction: row;
+                gap: 6px;
+                align-items: center;
+                @extend .button-effect;
+            }
+        }
+    }
+    .contact-us__subtittle{
+        color: var(--color-primary-500);
+        &::before{
+            @extend .pseudo-icon;
+        }
+    }
+    .contact-us__subtittle--contacts {
+        &::before{
+            content: "\f0e2";
+        }
+    }
+    .contact-us__subtittle--schedule {
+        &::before{
+            content: "\e8b5";
+        }
+    }
+    .contact-us__icon-svg{
+        height: 22px;
+        width: 22px;
+        color: inherit;
+    }
+    .contact-us__span{
+        @extend .line-height-p;
+    }
+
+}

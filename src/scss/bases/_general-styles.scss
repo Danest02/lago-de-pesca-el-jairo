@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//  TODO:ANCHOR --- Z-INDEX
+
+$z-index-1: 10;
+$z-index-2: 20;
+$z-index-3: 30;
+$z-index-4: 40;
+$z-index-5: 50;
+
+
+body {
+    color: var(--color-text);
+    font-family: 'p', arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+
+}
+input{
+    color: var(--color-text);
+}
+input::placeholder {
+    user-select: none;
+}
+
+input[type=search] {
+    &::-webkit-search-cancel-button {
+        display: none;
+    }
+}
+
+p {
+    line-height: 1.5;
+}
+.line-height-p{
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'tittle', Helvetica;
+}
+
+h1 {
+    text-align: center;
+    color: var(--color-primary-500);
+}
+
+
+.h1 {
+    font-size: 32px;
+    margin-bottom: var(--space-3);
+
+    @include min-width(768px) {
+        font-size: 48px;
+    }
+}
+
+.h2 {
+    font-size: 28px;
+
+    @include min-width(768px) {
+        font-size: 40px;
+    }
+}
+
+.h3 {
+    font-size: 24px;
+
+    @include min-width(768px) {
+        font-size: 32px;
+    }
+}
+
+.h4 {
+    font-size: 20px;
+
+    @include min-width(768px) {
+        font-size: 22px;
+    }
+}
+
+.p {
+    font-family: 'p';
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+}
+
+.p-small {
+    font-size: 14px;
+}
+
+
+
+a {
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+    position: relative;
+}
+
+address {
+    font-style: normal;
+    display: inline-block;
+}
+
+.body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    @extend .scrollbar-style;
+
+
+    header {
+        .header--none {
+            min-height: 1px;
+        }
+    }
+}
+
+.seccion {
+    margin-bottom: var(--space-1);
+}
+
+.container {
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width:$tablet-landscape) and (min-width: 850px) {
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+
+    @media (max-width:1366px) and (min-width:$tablet-landscape) {
+        margin-right: 122px;
+        margin-left: 122px;
+    }
+
+    @include desktop {
+        padding: 0;
+    }
+}
+
+.padding {
+    padding: 1rem;
+}
+
+

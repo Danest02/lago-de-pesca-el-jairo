@@ -1,0 +1,32 @@
+.footer{
+    background-color: var(--color-primary-600);
+    color: #fff;
+    margin-top: auto;
+    .footer__content{
+        padding: var(--space-4);
+        display: flex;
+        gap: var(--space-4);
+        .footer__social-media{
+            .footer__social-media-links{
+                display: flex;
+                gap: 8px;
+            }
+        }
+    }
+}
+.footer__tittle{
+    width: max-content;
+    margin-bottom: var(--space-6);
+    @extend .p;
+    user-select: none;
+}
+.footer__link{
+    display: flex;
+    gap: 4px;
+    @extend .button-effect;
+    svg{
+        height: 24px;
+        width: 24px;
+    }
+    
+}
