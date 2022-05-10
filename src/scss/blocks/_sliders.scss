@@ -73,17 +73,6 @@
     
 }
 
-.my-slider__container-slides--before {
-    &::before {
-        @extend .background-pseudo-element;
-        right: -1px;
-        transition: opacity .3s ease;
-        opacity: 1;
-        z-index: $z-index-1;
-        pointer-events: none;
-        background: linear-gradient(to left, var(--color-primary), rgba(121, 0, 0, 0) 10%, rgba(121, 0, 0, 0));
-    }
-}
 
 .my-slider__container-slides--before-hiden {
     &::before {

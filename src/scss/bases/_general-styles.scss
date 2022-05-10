@@ -130,14 +130,12 @@ address {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    max-width: var(--width-100vw);
     @extend .scrollbar-style;
 
 
-    header {
-        .header--none {
-            min-height: 1px;
-        }
-    }
+
+
 }
 
 .seccion {
@@ -148,16 +146,6 @@ address {
     max-width: 1150px;
     margin-left: auto;
     margin-right: auto;
-
-    @media (max-width:$tablet-landscape) and (min-width: 850px) {
-        margin-right: 60px;
-        margin-left: 60px;
-    }
-
-    @media (max-width:1366px) and (min-width:$tablet-landscape) {
-        margin-right: 122px;
-        margin-left: 122px;
-    }
 
     @include desktop {
         padding: 0;

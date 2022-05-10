@@ -1,10 +1,22 @@
 @include desktop {
     $navbar-header-heihgt: 4rem;
 }
+body{
+    overflow: visible !important;
+    height: auto;
+}
+.header{
+    position: sticky !important;
+    top: 0 !important;
+    // min-height: 100%;
+    z-index: 10;
+}
 
 .navbar-header {
-    background-color: var(--color-primary-600);
+    z-index: $z-index-1;
+    background-color: var(--color-primary-500);
     color: #fff;
+    width: 100%;
     
     .navbar-header__container {
         height: $navbar-header-heihgt;
@@ -84,7 +96,7 @@
 
                 .hamburguer {
                     margin-left: 4px;
-                    z-index: $z-index-1;
+                    z-index: $z-index-2;
                     margin-right: var(--space-6);
 
                     @include min-width(1150px) {
@@ -99,6 +111,7 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
+                z-index: $z-index-1;
                 clip-path: circle(0.0% at 100% 0);
                 transition: background-color .7s ease-in-out, clip-path .7s ease-in-out;
                 
@@ -110,7 +123,7 @@
                 }
                 
                 .menu__links {
-                    background-color: var(--color-primary-600);
+                    background-color: var(--color-primary-500);
                     height: 100%;
                     padding-left: 10%;
                     display: flex;
@@ -123,16 +136,6 @@
                         padding: 0;
                         height: auto;
                         flex-direction: row;
-                    }
-
-                    .menu__link--active {
-                        color: var(--color-secondary);
-                        pointer-events: none;
-
-                        &::after,
-                        &::before {
-                            display: none;
-                        }
                     }
 
                 }

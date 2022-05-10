@@ -1,10 +1,11 @@
 
 .main{
     .slider-top-container{
-        padding: 48px 0;
+        padding: var(--space-1) 0;
+        width: 100%;
         .slider-top{
             --column: 2;
-            @include min-width(700px){
+            @include min-width(600px){
                 --column: 3;
             }
             @include min-width(1000px){
@@ -12,11 +13,56 @@
             }
             .slider-top__slides{
                 .slider-top__slide{
+                    position: relative;
+                    // padding-top: 62.5%;
+                    width: 100%;
                     img{
                         aspect-ratio: 16/10;
                         object-fit: cover;
                     }
                 }
+            }
+        }
+    }
+    .activities{
+        background-color: var(--color-primary-100);
+        width: 100%;
+        padding: var(--space-1) var(--space-5);
+        .activities__tittle{
+            margin-bottom: var(--space-2);
+        }
+        .activities__cards{
+            display: flex;
+            gap: var(--space-5);
+            flex-wrap: wrap;
+            .activities__card{
+                @extend .flex-center, .flex-column;
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-6);
+                background-color: var(--color-primary-200);
+                padding: var(--space-5);
+                min-width: 100%;
+                border: 1px solid transparent;
+                transition: border .2s ease-in;
+                user-select: none;
+                &:hover{
+                    border: 1px solid var(--color-primary-500);
+                }
+                @include min-width(700px){
+                    min-width: calc((100% / 2 - 12px));
+                }
+                @include min-width(1000px){
+                    min-width: calc((100% / 3) - (var(--space-6)));
+                }
+                .activities__card-text{
+                    @extend .flex-center, .flex-column;
+                    gap: var(--space-7);
+                    .activities__card-p, .activities__card-tittle{
+                        text-align: center;
+                    }
+                }
+                
             }
         }
     }

@@ -6,14 +6,14 @@
     max-width: max-content;
     font-size: 1rem;
     font-family: 'button', arial;
-    background-color: var(--color-tertiary);
+    background-color: var(--color-primary-500);
     line-height: 2.25em;
     display: inline-block;
     padding: 0 1.125em;
     color: var(--color-white);
     text-decoration: none;
     text-align: center;
-    border-radius: 1.125rem;
+    // border-radius: 1.125rem;
     outline:none;
     cursor: pointer;
     border: none;
@@ -23,13 +23,13 @@
     user-select: none;
     
     &:hover {
-        background-color: var(--color-tertiary-800);
-        transform: scale(1.02);
+        background-color: var(--color-primary-700);
+        // transform: scale(1.01);
     }
     
     &:active {
-        transform: scale(1);
-        background-color: var(--color-tertiary-900);
+        transform: scale(0.97);
+        background-color: var(--color-primary-800);
 
     }
 }
@@ -37,11 +37,11 @@
 
 .mybtn--outline {
     background-color: transparent;
-    color: var(--color-secondary);
-    border: 1px solid var(--color-secondary);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
 
     &:hover {
-        background: var(--color-secondary);
+        background: var(--color-primary);
         color: var(--color-white);
     }
 }
