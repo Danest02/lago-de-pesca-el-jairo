@@ -212,6 +212,30 @@ gulp.task("imagemin500", () => {
 
     .pipe(gulp.dest("public/galery/images/500/"));
 });
+gulp.task("imagemin720", () => {
+  return gulp
+    .src("src/galery/images/720/*")
+    .pipe(
+      squoosh({
+        encodeOptions: {
+          //   oxipng: {},
+          webp: {},
+          //   avif: {},
+          //   mozjpg: {},
+        },
+        preprocessOptions: {
+          resize: {
+            enabled: true,
+            width: 720,
+            // width: Math.round(src.width / 2),
+            // height: Math.round(src.height / 2),
+          },
+        },
+      })
+    )
+
+    .pipe(gulp.dest("public/galery/images/720/"));
+});
 
 gulp.task("default", () => {
   gulp.watch("./src/js/*.js", gulp.series("babel"));
