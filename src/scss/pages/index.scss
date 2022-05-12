@@ -1,13 +1,47 @@
 body {
-    background-image: url(../galery/background/background.webp);
+    // background-image: url(../galery/background/background.webp);
 }
 
 .main {
-    background-color: antiquewhite;
+    // background-color: antiquewhite;
+    background-color: #fff;
     overflow: hidden;
 
+    .logo {
+        @extend .flex-center;
+        flex-direction: column;
+        gap: var(--space-2);
+        // background-color: rebeccapurple;
+        padding: var(--space-6) 0;
+        padding-top: 68px;
+        div{
+            display: none;
+            gap: 8px;
+            flex-direction: column;
+            p{
+                font-family: 'p';
+                font-size: 24px;
+                color: var(--color-primary-600);
+            }
+        }
+
+        img {
+            max-width: 220px;
+        }
+        h1{
+            margin-bottom: 0;
+        }
+        @include min-width(500px){
+            flex-direction: row;
+            div{
+                display: flex;
+            }
+
+        }
+        
+    }
+
     .slider-top-container {
-        padding-top: var(--space-1);
         width: 100%;
 
         .slider-top {
@@ -38,30 +72,42 @@ body {
 
     .activities {
         width: 100%;
-        padding: var(--space-1) var(--space-5);
-        @extend .flex-center, .flex-column;
+        padding-right: var(--space-5);
+        padding-left: var(--space-5);
+
+        @include min-width(700px) {
+            padding-right: 0;
+            padding-left: 0;
+
+        }
+
+        @extend .flex-center,
+        .flex-column;
 
         .activities__tittle {
-            margin-bottom: var(--space-2);
+            margin-bottom: var(--space-1);
             text-align: center;
             color: var(--color-primary-700);
             position: relative;
             display: inline-block;
 
-            &::after, &::before {
+            &::after,
+            &::before {
                 content: '';
                 position: absolute;
                 width: 120px;
                 height: 3px;
                 background-color: currentcolor;
                 top: 55%;
-              }
-              &::after {
+            }
+
+            &::after {
                 left: -140px;
-              }
-              &::before {
+            }
+
+            &::before {
                 right: -140px;
-              }
+            }
 
         }
 
@@ -106,7 +152,7 @@ body {
                     @extend .flex-center,
                     .flex-column;
                     gap: var(--space-7);
-                    
+
                     .activities__card-p,
                     .activities__card-tittle {
                         text-align: center;
@@ -132,6 +178,15 @@ body {
     }
 
     .print-data {
+        padding-right: var(--space-5);
+        padding-left: var(--space-5);
+
+        @include min-width(700px) {
+            padding-right: 0;
+            padding-left: 0;
+
+        }
+
         .print-data__cards {
             display: flex;
             flex-direction: column;

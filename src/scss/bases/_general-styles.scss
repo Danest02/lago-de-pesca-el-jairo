@@ -140,6 +140,10 @@ address {
 
 .seccion {
     margin-bottom: var(--space-1);
+    @include min-width(768px){
+        margin-bottom: 68px;
+        
+    }
 }
 
 .container {
