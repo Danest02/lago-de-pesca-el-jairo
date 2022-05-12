@@ -4,6 +4,7 @@ body {
 
 .main {
     background-color: antiquewhite;
+    overflow: hidden;
 
     .slider-top-container {
         padding-top: var(--space-1);
@@ -36,12 +37,32 @@ body {
     }
 
     .activities {
-        background-color: var(--color-primary-100);
         width: 100%;
         padding: var(--space-1) var(--space-5);
+        @extend .flex-center, .flex-column;
 
         .activities__tittle {
             margin-bottom: var(--space-2);
+            text-align: center;
+            color: var(--color-primary-700);
+            position: relative;
+            display: inline-block;
+
+            &::after, &::before {
+                content: '';
+                position: absolute;
+                width: 120px;
+                height: 3px;
+                background-color: currentcolor;
+                top: 55%;
+              }
+              &::after {
+                left: -140px;
+              }
+              &::before {
+                right: -140px;
+              }
+
         }
 
         .activities__cards {
@@ -55,15 +76,22 @@ body {
                 display: flex;
                 flex-direction: column;
                 gap: var(--space-6);
-                background-color: var(--color-primary-200);
+                background-color: var(--color-primary-400);
+                background-image: linear-gradient(40deg, var(--color-primary-500) 30%, var(--color-primary-400) 75%, var(--color-primary-400));
                 padding: var(--space-5);
                 min-width: 100%;
-                border: 1px solid transparent;
-                transition: border .2s ease-in;
+                transition: background-image .3s ease-in;
                 user-select: none;
+                color: #fff;
 
                 &:hover {
-                    border: 1px solid var(--color-primary-500);
+                    background-image: linear-gradient(40deg, var(--color-primary-600) 30%, var(--color-primary-400) 75%, var(--color-primary-400));
+
+                    .activities__card-button {
+                        a {
+                            background-color: var(--color-primary-400);
+                        }
+                    }
                 }
 
                 @include min-width(700px) {
@@ -78,10 +106,24 @@ body {
                     @extend .flex-center,
                     .flex-column;
                     gap: var(--space-7);
-
+                    
                     .activities__card-p,
                     .activities__card-tittle {
                         text-align: center;
+                    }
+                }
+
+                .activities__card-button {
+                    a {
+                        color: #fff;
+                        border: 1px solid white;
+
+                        &:hover {
+                            color: var(--color-primary-500);
+                            background-color: #fff;
+
+
+                        }
                     }
                 }
 
@@ -96,6 +138,7 @@ body {
             gap: var(--space-4);
 
             .print-data__card {
+                user-select: none;
                 overflow: hidden;
                 display: flex;
                 flex-direction: column-reverse;
@@ -107,7 +150,9 @@ body {
                     gap: var(--space-7);
                     text-align: center;
                     font-family: 'tittle';
-                    background-color: var(--color-primary-400);
+                    transition: background-image .3s ease;
+                    background-image: linear-gradient(40deg, var(--color-primary-500) 30%, var(--color-primary-400) 75%, var(--color-primary-400));
+                    // background-color: var(--color-primary-400);
                     color: #fff;
 
                     .print-data__tittle {
@@ -120,9 +165,11 @@ body {
                     max-height: 344px;
 
                     .print-data__img {
+                        filter: grayscale(30%);
                         height: 100%;
                         width: 100%;
                         object-fit: cover;
+                        transition: transform .3s ease, filter .3s ease;
                     }
                 }
 
@@ -136,11 +183,6 @@ body {
 
                     .print-data__img-container {
                         width: 55%;
-
-                        .print-data__img {
-                            transition: transform .3s ease;
-                        }
-
                     }
 
                 }
@@ -148,8 +190,13 @@ body {
                 &:hover {
                     .print-data__img-container {
                         .print-data__img {
+                            filter: grayscale(0%);
                             transform: scale(1.05);
                         }
+                    }
+
+                    .print-data__text {
+                        background-image: linear-gradient(40deg, var(--color-primary-600) 30%, var(--color-primary-400) 75%, var(--color-primary-400));
                     }
 
                 }

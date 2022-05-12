@@ -3,10 +3,56 @@
     color: #fff;
     margin-top: auto;
     width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: var(--space-1);
+    gap: var(--space-1);
     .footer__content{
-        padding: var(--space-4);
         display: flex;
+        flex-direction: column;
         gap: var(--space-4);
+        @include min-width(700px){
+            gap: var(--space-2);
+            flex-direction: row
+        }
+        .footer__seccion{
+            &:hover{
+                .footer__tittle{
+                    &::after {
+                        width: 100%;
+                        transform: translateX(0);
+                    }
+    
+                }
+
+            }
+            .footer__tittle{
+                width: max-content;
+                margin-bottom: 8px;
+                font-family: 'p-semibold';
+                @extend .p;
+                user-select: none;
+                @include min-width(700px){
+                    margin-bottom: 12px;
+                }        
+                &::after {
+                    content: "";
+                    margin-top: 3px;
+                    display: block;
+                    transform: translateX(100%);
+                    width: 0%;
+                    height: 3px;
+                    background: var(--color-white);
+                    border-radius: 3px;
+                    transition: width .5s, transform .5s ;
+                }
+            
+            
+            }
+        }
         .footer__social-media{
             .footer__social-media-links{
                 display: flex;
@@ -14,12 +60,18 @@
             }
         }
     }
-}
-.footer__tittle{
-    width: max-content;
-    margin-bottom: var(--space-6);
-    @extend .p;
-    user-select: none;
+    @include min-width(850px){
+        flex-direction: row
+    }
+    .footer__logo-ceo-alg{
+        @extend .flex-column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 12px;
+        img{
+            height: 1.5rem;
+        }
+    }
 }
 .footer__link{
     display: flex;
