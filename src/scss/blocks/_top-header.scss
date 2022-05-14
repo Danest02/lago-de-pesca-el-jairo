@@ -3,6 +3,7 @@
     background-color: red;
     user-select: none;
     width: 100%;
+    padding: 0;
 
     .top-header__images{
         @extend .flex-center;

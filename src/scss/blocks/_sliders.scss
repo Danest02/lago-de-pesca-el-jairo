@@ -5,8 +5,8 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    
-    
+
+
     .my-slider__navegation {
         display: grid;
         grid-auto-flow: column;
@@ -18,13 +18,14 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.3);
-            transition: background-color .3s ;
-            
+            background-color: #e337029d;
+            transition: background-color .3s;
+
 
             &::before {
                 transition: transform .3s ease;
-                @extend .flex-center, .pseudo-icon;
+                @extend .flex-center,
+                .pseudo-icon;
                 color: #fff;
                 font-size: 40px;
                 vertical-align: middle;
@@ -34,14 +35,15 @@
             }
 
             &:hover {
-                background-color: rgba(0, 0, 0, 0.5);
-                &::before{
+                background-color: #e33702ce;
+
+                &::before {
                     transform: scale(1.1);
                 }
             }
 
             &:active {
-                &::before{
+                &::before {
                     transform: scale(1.1);
                 }
 
@@ -50,6 +52,7 @@
 
         .my-slider__navegation-button--back {
             left: 0;
+
             &::before {
                 content: "\e5e0";
             }
@@ -57,6 +60,7 @@
 
         .my-slider__navegation-button--next {
             right: 0;
+
             &::before {
                 content: "\e5e1";
             }
@@ -69,8 +73,8 @@
 .my-slider__container-slides {
     position: relative;
     overflow: hidden;
-    
-    
+
+
 }
 
 
@@ -90,9 +94,10 @@
     scroll-snap-type: x mandatory;
     // scroll-snap-type: x proximity;
     display: grid;
-    grid-auto-columns: calc(100%  / var(--column));
+    grid-auto-columns: calc(100% / var(--column));
     grid-template-rows: repeat(var(--row), auto);
     grid-auto-flow: column;
+
     &:hover {
         cursor: grab;
     }

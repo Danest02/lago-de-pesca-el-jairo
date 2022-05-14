@@ -25,9 +25,17 @@
                         width: 100%;
                         transform: translateX(0);
                     }
-    
+                    
+                }
+                .footer__seccion-content{
+                    transform: scale(1.05) translateX(4px);
+                    background-color: var(--color-primary-500);
                 }
 
+            }
+            .footer__seccion-content{
+                padding: 4px;
+                transition: background-color .3s ease-in-out, transform .3s ease-in-out;
             }
             .footer__tittle{
                 width: max-content;
@@ -35,9 +43,6 @@
                 font-family: 'p-semibold';
                 @extend .p;
                 user-select: none;
-                @include min-width(700px){
-                    margin-bottom: 12px;
-                }        
                 &::after {
                     content: "";
                     margin-top: 3px;
@@ -61,7 +66,7 @@
         }
     }
     @include min-width(850px){
-        flex-direction: row
+        // flex-direction: row;
     }
     .footer__logo-ceo-alg{
         @extend .flex-column;

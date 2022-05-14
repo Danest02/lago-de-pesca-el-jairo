@@ -17,18 +17,18 @@
     outline:none;
     cursor: pointer;
     border: none;
-    transition: background-color .3s ease, transform .15s ease;
+    transition: background-color .3s ease, transform .3s ease;
     
 
     user-select: none;
     
     &:hover {
         background-color: var(--color-primary-700);
-        // transform: scale(1.01);
+        transform: scale(1.03);
     }
     
     &:active {
-        transform: scale(0.97);
+        transform: scale(1);
         background-color: var(--color-primary-800);
 
     }

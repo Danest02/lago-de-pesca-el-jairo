@@ -13,6 +13,10 @@ $z-index-4: 40;
 $z-index-5: 50;
 
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--color-text);
     font-family: 'p', arial, sans-serif;
@@ -20,9 +24,11 @@ body {
     line-height: 1;
 
 }
-input{
+
+input {
     color: var(--color-text);
 }
+
 input::placeholder {
     user-select: none;
 }
@@ -36,7 +42,8 @@ input[type=search] {
 p {
     line-height: 1.5;
 }
-.line-height-p{
+
+.line-height-p {
     line-height: 1.5;
 }
 
@@ -139,10 +146,16 @@ address {
 }
 
 .seccion {
-    margin-bottom: var(--space-1);
-    @include min-width(768px){
-        margin-bottom: 68px;
-        
+    padding-top: var(--space-2);
+    // padding-bottom: var(--space-2);
+    padding-top: 84px;
+    display: block;
+
+    @include min-width(768px) {
+        padding-top: var(--space-1);
+        // padding-bottom: var(--space-1);
+        padding-top: 84px;
+
     }
 }
 
@@ -150,14 +163,38 @@ address {
     max-width: 1150px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
-    @include desktop {
-        padding: 0;
-    }
 }
 
 .padding {
     padding: 1rem;
 }
 
+.tittle {
+    position: relative;
+    display: inline-block;
+    margin-bottom: var(--space-1);
+    text-align: center;
+    color: var(--color-primary-700);
 
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        width: 120px;
+        height: 3px;
+        background-color: currentcolor;
+        top: 55%;
+    }
+
+    &::after {
+        left: -140px;
+    }
+
+    &::before {
+        right: -140px;
+    }
+
+}
