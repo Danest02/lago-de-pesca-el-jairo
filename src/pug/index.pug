@@ -5,16 +5,15 @@ block header
 
 
 
-
 block main
-    seccion.logo.seccion.container
-        img(class="logo__img" src="./galery/logo/logo.png", alt="logo de la empresa")
+    section.logo.seccion.container
+        img(class="logo__img" src="./galery/logo/logo.png" alt="logo de la empresa")
         .logo__text
             h1.logo__tittle.h1 Lagos de Pesca El Janeiro
             p.logo__p El lugar que estás buscando
 
-        
-    seccion.slider-top-container.seccion.container
+
+    section.slider-top-container.seccion.container
         .slider-top.my-slider
             .my-slider__container-slides
                 .slider-top__slides.my-slider__slides
@@ -31,57 +30,74 @@ block main
                     .slider-top__slide.my-slider__slide
                         img(src="galery/images/500/9.webp" class="top-header__image top-header__image--1" loading="loazy" alt="Zona de comidas")
                     .slider-top__slide.my-slider__slide
-                        img(src="galery/images/500/4.webp" class="top-header__image top-header__image--1" loading="loazy" alt="Zona de comidas")
+                        img(src="galery/images/500/1.webp" class="top-header__image top-header__image--1" loading="loazy" alt="Zona de comidas")
                     .slider-top__slide.my-slider__slide
-                        img(src="galery/images/500/5.webp" class="top-header__image top-header__image--1" loading="loazy" alt="Zona de comidas")
+                        img(src="galery/images/500/2.webp" class="top-header__image top-header__image--1" loading="loazy" alt="Zona de comidas")
             .slider-top.my-slider__navegation
                 .slider-top-button.slider-top__navegation-button--back.my-slider__navegation-button.my-slider__navegation-button--back
                 .slider-top-button.slider-top__navegation-button--next.my-slider__navegation-button.my-slider__navegation-button--next
 
 
-    seccion.activities.seccion#actividades.container
+    section(data-scroll-spy class="activities seccion container" id="actividades")
         h2.h2.tittle.activities__tittle Disfruta de:
         .activities__cards 
             .activities__card
-                .activities__card-text
-                    h3.h3.activities__card-tittle Restaurante 
-                    p.p.activities__card-p Prueba nuestros deliciosos platos
-                .activities__card-button 
-                    a(src="#" class="mybtn mybtn--outline") Ver más
+                .activities__card-image-container
+                    img(src="galery/images/720/restaurante.webp" class="activities__card-image" loading="loazy" alt="Zona de comidas")
+                .activities__card-data
+                    .activities__card-text
+                        h3.h3.activities__card-tittle Restaurante 
+                        p.p.activities__card-p Prueba nuestros deliciosos platos
+                    .activities__card-button-container
+                        a(src="#" class="activities__card-button mybtn mybtn--outline") Ver carta
             .activities__card
-                .activities__card-text
-                    h3.h3.activities__card-tittle Bar
-                    p.p.activities__card-p Prueba nuestros deliciosos platos
-                .activities__card-button 
-                    a(src="#" class="mybtn mybtn--outline") Ver más
+                .activities__card-image-container
+                    img(src="galery/images/720/bar.webp" class="activities__card-image" loading="loazy" alt="Zona de comidas")
+                .activities__card-data
+                    .activities__card-text
+                        h3.h3.activities__card-tittle Bar
+                        p.p.activities__card-p Prueba nuestros deliciosos platos
+                    .activities__card-button-container
+                        a(src="#" class="activities__card-button mybtn mybtn--outline") Ver carta
             .activities__card
-                .activities__card-text
-                    h3.h3.activities__card-tittle Pesca Deportiva
-                    p.p.activities__card-p Prueba nuestros deliciosos platos
-                .activities__card-button 
-                    a(src="#" class="mybtn mybtn--outline") Ver más
+                .activities__card-image-container
+                    img(src="galery/images/720/pesca.webp" class="activities__card-image" loading="loazy" alt="Zona de comidas")
+                .activities__card-data
+                    .activities__card-text
+                        h3.h3.activities__card-tittle Lago de Pesca
+                        p.p.activities__card-p Prueba nuestros deliciosos platos
+                    .activities__card-button-container
+                        a(src="#" class="activities__card-button mybtn mybtn--outline") Ver fotos
             .activities__card
-                .activities__card-text
-                    h3.h3.activities__card-tittle Zona Infantil
-                    p.p.activities__card-p Prueba nuestros deliciosos platos
-                .activities__card-button 
-                    a(src="#" class="mybtn mybtn--outline") Ver más
+                .activities__card-image-container
+                    img(src="galery/images/720/charco.webp" class="activities__card-image" loading="loazy" alt="Zona de comidas")
+                .activities__card-data
+                    .activities__card-text
+                        h3.h3.activities__card-tittle Charco de agua natural
+                        p.p.activities__card-p Prueba nuestros deliciosos platos
+                    .activities__card-button-container
+                        a(src="#" class="activities__card-button mybtn mybtn--outline") Ver fotos
             .activities__card
-                .activities__card-text
-                    h3.h3.activities__card-tittle Charco de agua natural
-                    p.p.activities__card-p Prueba nuestros deliciosos platos
-                .activities__card-button 
-                    a(src="#" class="mybtn mybtn--outline") Ver más
+                .activities__card-image-container
+                    img(src="galery/images/720/zona infantil.webp" class="activities__card-image" loading="loazy" alt="Zona de comidas")
+                .activities__card-data
+                    .activities__card-text
+                        h3.h3.activities__card-tittle Zona Infantil
+                        p.p.activities__card-p Prueba nuestros deliciosos platos
+                    .activities__card-button-container
+                        a(src="#" class="activities__card-button mybtn mybtn--outline") Ver fotos
+                
 
-    seccion.print-data.seccion.container
-            .print-data__card
-                .print-data__text 
-                    h3.h1.print-data__tittle ¡Son Bienvenidos! 
-                    span.h3 todos los integrantes de tu familia
-                .print-data__img-container
-                    img(src="./galery/images/720/mascotas.webp" class="print-data__img")
-    seccion.location.seccion#ubicacion.container
-        h2.h1.tittle Como llegar
+    section.print-data.seccion.container
+        h2.h1.tittle.print-data__tittle Buenas noticias
+        .print-data__card
+            .print-data__text 
+                h3.h1.print-data__tittle-text ¡Son Bienvenidos! 
+                span.h3 todos los integrantes de tu familia
+            .print-data__img-container
+                img(src="./galery/images/720/mascotas.webp" class="print-data__img")
+    section(class="location seccion container" id="ubicacion" data-scroll-spy)
+        h2.h1.tittle Como llegar 
         .location__content
             .location__transport 
                 h3.location__transport-tittle.h2 Tenemos servicio de transporte 
@@ -91,7 +107,7 @@ block main
                 <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15902.994511627587!2d-75.70225625!3d4.81316865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1652415829859!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 .location__adress-container
                     address.location__adress Vereda las Mercedes - Bitania Ant
-        
+
 
 
 

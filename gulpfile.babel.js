@@ -117,6 +117,8 @@ gulp.task("css", () => {
           "display-none",
           "swiper-pagination-bullet",
           "swiper-pagination-bullet-active",
+          "animated-border--active",
+          "aparecer"
         ],
         FontFace: true,
         variables: true,

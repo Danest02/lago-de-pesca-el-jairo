@@ -73,6 +73,12 @@
         transform: translateX(0);
     }
 }
+.animated-border--active {
+    &::after{
+        width: 100%;
+        transform: translateX(0);
+    }
+}
 
 .animated-border--left {
     &::after{
