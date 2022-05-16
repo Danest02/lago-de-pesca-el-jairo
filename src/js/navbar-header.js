@@ -22,11 +22,18 @@ hamburguer.addEventListener("click", () => {
 	document.querySelector(".hamburguer__div-center").classList.toggle("hamburguer--simple");
 	navbarHeader.classList.toggle("navbar-header--hamburguer");
 	if (navbarHeader.classList.contains("navbar-header--hamburguer")) {
-		disableScroll();
+        disableScroll();
 	} else {
-		enableScroll();
+        enableScroll();
 	}
-});
+})
+
+document.getElementById("menu").addEventListener("click", (e) => {
+    if(e.target.matches('.menu__link')){
+        enableScroll();
+        navbarHeader.classList.toggle("navbar-header--hamburguer");
+    }
+})
 
 const $sections = document.querySelectorAll("[data-scroll-spy]");
 
@@ -44,19 +51,6 @@ const callback = (entries) => {
 		}else{
 			document.getElementById(link).classList.remove("animated-border--active");
         }
-		// console.log(entry.target.id, "eso es")
-		// switch (entry.target.id) {
-		//     case "actividades":
-		//         document.getElementById("link-actividades").classList.toggle("animated-border--active")
-		//         break;
-
-		//     case "ubicacion":
-		//         document.getElementById("link-ubicacion").classList.toggle("animated-border--active")
-		//         break;
-
-		//     default:
-		//         break;
-		// }
 	});
 };
 
@@ -64,7 +58,3 @@ let observer = new IntersectionObserver(callback, options);
 
 $sections.forEach((el) => observer.observe(el));
 
-// window.addEventListener("scroll", () => {
-// 	let currentScroll = window.pageYOffset;
-// 	console.log(currentScroll);
-// });
