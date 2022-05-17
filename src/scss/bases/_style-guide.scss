@@ -58,26 +58,28 @@
 // * Paragraph
 @font-face {
     font-family: 'p';
-    src: local('Poppins'), local('Poppins-Regular'), url(../galery/fonts/OpenSans-Regular.ttf) format('truetype');
+    // font-display: optional;
+    src: local('OpenSans-Regular'), local('OpenSans Regular'), url(../galery/fonts/OpenSans-Regular.ttf) format('truetype');
 }
 
 // * Paragraph SemiBold
 @font-face {
     font-family: 'p-semibold';
-    src: local('PoppinsSemiBold'), local('Poppins-SemiBold'), url(../galery/fonts/OpenSans-SemiBold.ttf) format('truetype');
+    // font-display: optional;
+    src: local('OpenSans-SemiBold'), local('OpenSans SemiBold'), url(../galery/fonts/OpenSans-SemiBold.ttf) format('truetype');
 }
 
 // * Tittle
 @font-face {
     font-family: 'tittle';
-    src: local('RobotoBlack'), local('Roboto-Black'), url(../galery/fonts/EBGaramond-BoldItalic.ttf) format('truetype');
+    src: local('EBGaramond-BoldItalic'), local('EBGaramond BoldItalic'), url(../galery/fonts/EBGaramond-BoldItalic.ttf) format('truetype');
 }
 
 // * Button
 @font-face {
     font-family: 'button';
     // font-display: optional;
-    src: local('Roboto'), local('Roboto-Medium'), url(../galery/fonts/OpenSans-SemiBold.ttf) format('truetype');
+    src: local('OpenSans-SemiBold'), local('OpenSans SemiBold'), url(../galery/fonts/OpenSans-SemiBold.ttf) format('truetype');
 }
 
 

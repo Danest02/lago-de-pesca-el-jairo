@@ -10,18 +10,16 @@ body {
 
 .main {
     overflow: hidden;
-    padding: 0;
     background-color: var(--color-background-primary);
 
 
     .logo {
-        @extend .flex-center;
-        flex-direction: column;
+        @extend .flex-center,
+        .flex-column;
         gap: var(--space-2);
         padding: 68px 0;
 
         &:hover {
-
             .logo__text,
             .logo__img {
                 transform: scale(1.03);
@@ -31,7 +29,6 @@ body {
         .logo__text,
         .logo__img {
             transition: transform .4s ease-in-out;
-
         }
 
         .logo__text {
@@ -104,10 +101,6 @@ body {
         width: 100%;
         @extend .flex-center,
         .flex-column;
-        padding-top: 84px;
-        padding-left: 0;
-        padding-right: 0;
-
 
 
         .activities__cards {
@@ -115,7 +108,6 @@ body {
             gap: var(--space-5);
             flex-wrap: wrap;
             width: 100%;
-            // background-color: green;
 
             .activities__card {
                 @extend .flex-center,
@@ -141,10 +133,7 @@ body {
 
 
                 .activities__card-image-container {
-                    background-color: goldenrod;
                     width: 100%;
-                    display: flex;
-
                     .activities__card-image {
                         width: 100%;
                         object-fit: cover;
@@ -154,9 +143,8 @@ body {
                 }
 
                 .activities__card-data {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
+                    @extend .space-between,
+                    .align-center;
                     width: 100%;
                     padding: var(--space-5);
                     gap: var(--space-5);
@@ -164,11 +152,15 @@ body {
                         flex-direction: column;
                         align-items: flex-start;
                     }
+                    @include max-width(300px){
+                        align-items: flex-start;
+                        flex-direction: column
+                        
+                    }
     
 
                     .activities__card-text {
                         @extend .flex-column;
-                        display: flex;
                         gap: var(--space-7);
 
                         .activities__card-p,
@@ -213,8 +205,6 @@ body {
         height: auto;
         background-color: var(--color-background-secondary);
         width: 100%;
-        padding-left: 0;
-        padding-right: 0;
 
         .print-data__card {
             user-select: none;
@@ -312,9 +302,8 @@ body {
             }
 
             .location__transport {
+                @extend .flex-column;        
                 padding-left: var(--space-3);
-                display: flex;
-                flex-direction: column;
                 gap: var(--space-6);
                 transition: transform .4s ease-in-out;
 
@@ -323,8 +312,7 @@ body {
                 }
 
                 .location__transport-buttom {
-                    display: flex;
-                    align-items: center;
+                    @extend .align-center;
                     gap: 8px;
 
                     &::before {
@@ -357,11 +345,10 @@ body {
                 }
 
                 .location__adress-container {
+                    @extend .align-center;
                     padding: var(--space-6);
                     background-color: var(--color-primary-500);
                     color: #fff;
-                    display: flex;
-                    align-items: center;
                     gap: 8px;
 
                     &::before {

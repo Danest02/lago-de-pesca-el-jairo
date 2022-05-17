@@ -8,8 +8,12 @@
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    padding: var(--space-1);
+    padding: var(--space-1) var(--space-4);
     gap: var(--space-1);
+    @include min-width(500px){
+        padding: var(--space-1);
+
+    }
     .footer__content{
         display: flex;
         flex-direction: column;

@@ -10,10 +10,6 @@ window.addEventListener("load", function () {
 			this.mySliderDifference = 0;
 			this.numberOfColumns = Math.floor(parseInt(getComputedStyle(document.querySelector(`${nameSlider}`)).getPropertyValue("--column")));
 			this.slideWidth = document.querySelector(`${this.nameSlider} .my-slider__slide`).offsetWidth;
-			this.semaphoreInterval = true;
-		}
-		setSemaphoreInterval(a) {
-			this.semaphoreInterval = a;
 		}
 		scroll() {
 			if (this.mySliderDifference < 0) {
@@ -30,14 +26,8 @@ window.addEventListener("load", function () {
 				}
 			}
 		}
-		interval(time) {
-			setInterval(() => {
-				if (this.semaphoreInterval) {
-					this.scroll();
-				}
-			}, time);
-		}
 		mouseMove() {
+			this.$mySliderSlides.scrollLeft = 0
 			let mySliderPressed = false;
 			let mySliderStartX = 0;
 			let mySliderEndX = 0;

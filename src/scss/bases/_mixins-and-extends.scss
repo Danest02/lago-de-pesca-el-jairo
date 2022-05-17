@@ -94,9 +94,13 @@
     display: flex;
     flex-wrap: wrap;
 }
-.flex-start{
+.align-start{
     display: flex;
-    align-content: flex-start;
+    align-items: flex-start;
+}
+.align-center{
+    display: flex;
+    align-items: center;
 }
 .space-between{
     display: flex;
