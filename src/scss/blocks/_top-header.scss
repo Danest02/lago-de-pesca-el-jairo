@@ -1,19 +1,23 @@
 .top-header{
     position: relative;
-    background-color: red;
     user-select: none;
     width: 100%;
     padding: 0;
 
     .top-header__images{
         @extend .flex-center;
+        height: 120px;
+        @include min-width(500px){
+            height: auto;
+
+        }
         .top-header__image{
             flex-grow: 1;
             aspect-ratio: 16/9;
             min-width: 0;
 
         }
-        .top-header__image--3{
+        .top-header__image--1, .top-header__image--3{
             display: none;
             @include min-width(500px){
                 display: block;

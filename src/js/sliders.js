@@ -58,6 +58,7 @@ window.addEventListener("load", function () {
 			});
 		}
 		navegationButton() {
+			this.$mySliderSlides.scrollLeft = 0
 			this.$mySlider.addEventListener("click", (e) => {
 				if (e.target == this.$mySliderNextButtom) {
 					if (this.$mySliderSlides.scrollLeft >= this.$mySliderSlides.scrollWidth - this.$mySliderSlides.offsetWidth) {
@@ -74,5 +75,4 @@ window.addEventListener("load", function () {
 	const SliderTop = new MySlider(".slider-top");
 	SliderTop.mouseMove();
 	SliderTop.navegationButton();
-	// SliderTop.interval(1000);
 });

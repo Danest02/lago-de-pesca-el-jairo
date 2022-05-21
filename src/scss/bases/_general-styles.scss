@@ -19,7 +19,7 @@ html {
 
 body {
     color: var(--color-text);
-    font-family: 'p', arial, sans-serif;
+    font-family: arial, sans-serif;
     font-size: 1rem;
     line-height: 1;
 
@@ -94,7 +94,7 @@ h1 {
 }
 
 .p {
-    font-family: 'p';
+    font-family: inherit;
     font-size: 16px;
     font-weight: normal;
     text-align: left;
@@ -146,6 +146,7 @@ address {
 }
 
 .section {
+    will-change: transform, opacity;
     padding: 84px 16px 0 16px;
     display: block;
     @include min-width(900px){

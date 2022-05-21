@@ -44,7 +44,7 @@
             .footer__tittle{
                 width: max-content;
                 margin-bottom: 8px;
-                font-family: 'p-semibold';
+                font-weight: 600;
                 @extend .p;
                 user-select: none;
                 &::after {
@@ -77,16 +77,16 @@
         align-items: flex-start;
         justify-content: center;
         gap: 12px;
-        img{
+        .logo-ceo-alg{
             height: 1.5rem;
         }
     }
 }
 .footer__link{
     display: flex;
-    gap: 4px;
+    gap: 8px;
     @extend .button-effect;
-    svg{
+    .footer__link-svg{
         height: 24px;
         width: 24px;
     }

@@ -1,5 +1,5 @@
 //- pug -w --pretty src/pug/pages/*.pug -o ./public -p ./src/pug/templates
-
+<!DOCTYPE html>
 html(lang="es")
     head
         meta(charset="UTF-8")
@@ -12,16 +12,22 @@ html(lang="es")
         //- STUB INDEXAR LOS BUSCADORES | no es necesario si esta en index
         meta(name="robots" content="index, follow") 
 
+        //- STUB PRECARGAR FUENTES
+        <link rel="preload" href="galery\fonts\EBGaramond-BoldItalic.ttf" as="font" type="font/ttf" crossorigin>
+        //- <link rel="preload" href="galery\fonts\OpenSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
+        //- <link rel="preload" href="galery\fonts\OpenSans-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="preload" href="galery\fonts\MaterialIconsRound-Regular.otf" as="font" type="font/otf" crossorigin>
+
         //- STUB FAVICON | 64 x 64 recomendado
-        link(rel="shortcut icon" href="../public/galery/favicon/favicon.svg" type="image/x-icon")
-        link(rel="icon" href="../public/galery/favicon/favicon.svg" type="image/x-icon")
+        link(rel="shortcut icon" href="galery/favicon/favicon.svg" type="image/x-icon")
+        link(rel="icon" href="galery/favicon/favicon.svg" type="image/x-icon")
 
         //- STUB LEAFLET.JS mapa
         //- link(rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css")
 
 
         //- STUB ESTILOS CSS
-        link(rel="stylesheet" type="text/css" href="css/styles.css")
+        link(rel="stylesheet" type="text/css" href="styles.css")
 
         //- STUB SWIPPER JS
         //- link(rel="stylesheet" type="text/css" href="https://unpkg.com/swiper@8/swiper-bundle.min.css")

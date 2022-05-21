@@ -7,7 +7,7 @@ block header
 
 block main
     section.logo.section.container
-        img(class="logo__img" src="./galery/logo/logo.png" alt="logo de la empresa")
+        img(class="logo__img" src="./galery/logo/logo.webp" width="220" height="262" alt="logo de Lagos de Pesca El Janeiro")
         .logo__text
             h1.logo__tittle.h1 Lagos de Pesca El Janeiro
             p.logo__p El lugar que estás buscando
@@ -18,6 +18,12 @@ block main
             .my-slider__container-slides
                 .slider-top__slides.my-slider__slides
                     .slider-top__slide.my-slider__slide
+                        img(src="galery/images/500/1.webp" class="top-header__image top-header__image--1" loading="lazy" alt="Zona de comidas")
+                    .slider-top__slide.my-slider__slide
+                        img(src="galery/images/500/2.webp" class="top-header__image top-header__image--1" loading="lazy" alt="Zona de comidas")
+                    .slider-top__slide.my-slider__slide
+                        img(src="galery/images/500/3.webp" class="top-header__image top-header__image--1" loading="lazy" alt="Zona de comidas")
+                    .slider-top__slide.my-slider__slide
                         img(src="galery/images/500/4.webp" class="top-header__image top-header__image--1" loading="lazy" alt="Zona de comidas")
                     .slider-top__slide.my-slider__slide
                         img(src="galery/images/500/5.webp" class="top-header__image top-header__image--1" loading="lazy" alt="Zona de comidas")
@@ -27,12 +33,6 @@ block main
                         img(src="galery/images/500/7.webp" class="top-header__image top-header__image--1" loading="lazy" alt="Zona de comidas")
                     .slider-top__slide.my-slider__slide
                         img(src="galery/images/500/8.webp" class="top-header__image top-header__image--1" loading="lazy" alt="Zona de comidas")
-                    .slider-top__slide.my-slider__slide
-                        img(src="galery/images/500/9.webp" class="top-header__image top-header__image--1" loading="lazy" alt="Zona de comidas")
-                    .slider-top__slide.my-slider__slide
-                        img(src="galery/images/500/1.webp" class="top-header__image top-header__image--1" loading="lazy" alt="Zona de comidas")
-                    .slider-top__slide.my-slider__slide
-                        img(src="galery/images/500/2.webp" class="top-header__image top-header__image--1" loading="lazy" alt="Zona de comidas")
             .slider-top.my-slider__navegation
                 .slider-top-button.slider-top__navegation-button--back.my-slider__navegation-button.my-slider__navegation-button--back
                 .slider-top-button.slider-top__navegation-button--next.my-slider__navegation-button.my-slider__navegation-button--next
@@ -43,49 +43,59 @@ block main
         .activities__cards 
             .activities__card
                 .activities__card-image-container
-                    img(src="galery/images/720/restaurante.webp" class="activities__card-image" loading="lazy" alt="Zona de comidas")
+                    picture 
+                        source(srcset="galery/images/720/restaurante.webp" media="(min-width: 600px)")
+                        img(src="galery/images/300/restaurante.webp" class="activities__card-image" loading="lazy" alt="Zona de comidas")
                 .activities__card-data
                     .activities__card-text
                         h3.h3.activities__card-tittle Restaurante 
                         p.p.activities__card-p Prueba nuestros deliciosos platos
                     .activities__card-button-container
-                        a(src="#" class="activities__card-button mybtn mybtn--outline") Ver carta
+                        buttom(class="activities__card-button mybtn mybtn--outline") Ver carta
             .activities__card
                 .activities__card-image-container
-                    img(src="galery/images/720/bar.webp" class="activities__card-image" loading="lazy" alt="Zona de comidas")
+                    picture 
+                        source(srcset="galery/images/720/bar.webp" media="(min-width: 600px)")
+                        img(src="galery/images/300/bar.webp" class="activities__card-image" loading="lazy" alt="Zona de comidas")
                 .activities__card-data
                     .activities__card-text
                         h3.h3.activities__card-tittle Bar
                         p.p.activities__card-p Prueba nuestros deliciosos platos
                     .activities__card-button-container
-                        a(src="#" class="activities__card-button mybtn mybtn--outline") Ver carta
+                        buttom(class="activities__card-button mybtn mybtn--outline") Ver carta
             .activities__card
                 .activities__card-image-container
-                    img(src="galery/images/720/pesca.webp" class="activities__card-image" loading="lazy" alt="Zona de comidas")
+                    picture 
+                        source(srcset="galery/images/720/pesca.webp" media="(min-width: 600px)")
+                        img(src="galery/images/300/pesca.webp" class="activities__card-image" loading="lazy" alt="Zona de comidas")
                 .activities__card-data
                     .activities__card-text
                         h3.h3.activities__card-tittle Lago de Pesca
                         p.p.activities__card-p Prueba nuestros deliciosos platos
                     .activities__card-button-container
-                        a(src="#" class="activities__card-button mybtn mybtn--outline") Ver fotos
+                        buttom(class="activities__card-button mybtn mybtn--outline") Ver fotos
             .activities__card
                 .activities__card-image-container
-                    img(src="galery/images/720/charco.webp" class="activities__card-image" loading="lazy" alt="Zona de comidas")
+                    picture 
+                        source(srcset="galery/images/720/charco.webp" media="(min-width: 600px)")
+                        img(src="galery/images/300/charco.webp" class="activities__card-image" loading="lazy" alt="Zona de comidas")
                 .activities__card-data
                     .activities__card-text
                         h3.h3.activities__card-tittle Charco de agua natural
                         p.p.activities__card-p Prueba nuestros deliciosos platos
                     .activities__card-button-container
-                        a(src="#" class="activities__card-button mybtn mybtn--outline") Ver fotos
+                        buttom(class="activities__card-button mybtn mybtn--outline") Ver fotos
             .activities__card
                 .activities__card-image-container
-                    img(src="galery/images/720/zona infantil.webp" class="activities__card-image" loading="lazy" alt="Zona de comidas")
+                    picture 
+                        source(srcset="galery/images/720/zona.webp" media="(min-width: 600px)")
+                        img(src="galery/images/300/zona infantil.webp" class="activities__card-image" loading="lazy" alt="Zona de comidas")
                 .activities__card-data
                     .activities__card-text
                         h3.h3.activities__card-tittle Zona Infantil
                         p.p.activities__card-p Prueba nuestros deliciosos platos
                     .activities__card-button-container
-                        a(src="#" class="activities__card-button mybtn mybtn--outline") Ver fotos
+                        buttom(class="activities__card-button mybtn mybtn--outline") Ver fotos
                 
 
     section.print-data.section.container
@@ -95,16 +105,16 @@ block main
                 h3.h1.print-data__tittle-text ¡Son Bienvenidos! 
                 span.h3 todos los integrantes de tu familia
             .print-data__img-container
-                img(src="./galery/images/720/mascotas.webp" loading="lazy" class="print-data__img")
+                img(src="./galery/images/720/mascotas.webp" loading="lazy" class="print-data__img" alt="se aceptan mascotas")
     section(class="location section container" id="ubicacion" data-scroll-spy)
         h2.h1.tittle Como llegar 
         .location__content
             .location__transport 
                 h3.location__transport-tittle.h2 Tenemos servicio de transporte 
                 p.location__transport-p.p comunicate con nosotros para más información 
-                a.location__transport-buttom.mybtn WhatsApp
+                a(href="https://wa.me/3127857576" class="location__transport-buttom mybtn") WhatsApp
             .location__map-container
-                <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15902.994511627587!2d-75.70225625!3d4.81316865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1652415829859!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe tittle="mapa ubicación" class="location__map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15902.994511627587!2d-75.70225625!3d4.81316865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1652415829859!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
                 .location__adress-container
                     address.location__adress Vereda las Mercedes - Bitania Ant
 

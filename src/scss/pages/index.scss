@@ -39,13 +39,15 @@ body {
             @include min-width(500px) {
                 display: flex;
             }
+            .logo__tittle, .logo__p{
+                text-align: start;
+            }
 
             .logo__tittle {
                 margin-bottom: 0;
             }
 
             .logo__p {
-                font-family: 'p';
                 font-size: 24px;
                 color: var(--color-primary-600);
             }
@@ -88,6 +90,7 @@ body {
                     width: 100%;
 
                     img {
+                        width: 100%;
                         aspect-ratio: 16/9;
                         object-fit: cover;
                     }
@@ -134,6 +137,8 @@ body {
 
                 .activities__card-image-container {
                     width: 100%;
+                    background-color: hotpink;
+                    line-height: 0;
                     .activities__card-image {
                         width: 100%;
                         object-fit: cover;
