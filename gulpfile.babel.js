@@ -241,7 +241,7 @@ gulp.task("imagemin720", () => {
         },
         preprocessOptions: {
           resize: {
-            enabled: true,
+            enabled: true, 
             width: 620,
             // width: Math.round(src.width / 2),
             // height: Math.round(src.height / 2),
