@@ -32,6 +32,7 @@
     &::after{
         @extend .flex-center, .position-absolute;
         font-size: 16px;
+        line-height: 1;
         font-family: 'tittle';
         color: #fff;
         text-align: center;

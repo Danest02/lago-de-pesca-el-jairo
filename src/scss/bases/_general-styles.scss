@@ -21,7 +21,7 @@ body {
     color: var(--color-text);
     font-family: arial, sans-serif;
     font-size: 1rem;
-    line-height: 1;
+    line-height: 0;
 
 }
 
@@ -43,6 +43,11 @@ p {
     line-height: 1.5;
 }
 
+span,
+a {
+    line-height: 1;
+}
+
 .line-height-p {
     line-height: 1.5;
 }
@@ -52,6 +57,7 @@ h2,
 h3,
 h4 {
     font-family: 'tittle', Helvetica;
+    line-height: 1;
 }
 
 h1 {
@@ -149,7 +155,8 @@ address {
     will-change: transform, opacity;
     padding: 84px 16px 0 16px;
     display: block;
-    @include min-width(900px){
+
+    @include min-width(900px) {
         padding-left: 0;
         padding-right: 0;
     }

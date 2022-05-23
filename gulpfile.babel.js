@@ -204,9 +204,9 @@ gulp.task("imagemin300", () => {
 
     .pipe(gulp.dest("public/galery/images/300/"));
 });
-gulp.task("imagemin500", () => {
+gulp.task("imagemin400", () => {
   return gulp
-    .src("src/galery/images/500/*")
+    .src("src/galery/images/400/*")
     .pipe(
       squoosh({
         encodeOptions: {
@@ -218,7 +218,7 @@ gulp.task("imagemin500", () => {
         preprocessOptions: {
           resize: {
             enabled: true,
-            width: 500,
+            width: 400,
             // width: Math.round(src.width / 2),
             // height: Math.round(src.height / 2),
           },
@@ -226,7 +226,7 @@ gulp.task("imagemin500", () => {
       })
     )
 
-    .pipe(gulp.dest("public/galery/images/500/"));
+    .pipe(gulp.dest("public/galery/images/400/"));
 });
 gulp.task("imagemin720", () => {
   return gulp
@@ -241,7 +241,7 @@ gulp.task("imagemin720", () => {
         },
         preprocessOptions: {
           resize: {
-            enabled: true, 
+            enabled: true,
             width: 620,
             // width: Math.round(src.width / 2),
             // height: Math.round(src.height / 2),
